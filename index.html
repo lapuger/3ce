@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keyword" content="스타일난다, 스타일, 3ce, 쓰리씨이, tmxkdlfsksek, TmflTldl, 3씨이, 패션, 트렌드, 트랜드, 최신유행, 화장품, 립스틱, 립, 아이섀도, 파우더, 악세사리, 블러셔">
+	<meta name="description" content="유니크, 모던, 컴템포러리 캐쥬얼 여성의류 브랜드. 차별화된 코스메틱라인 3CE와 함께 토탈 스타일링 제안.">
+	<!---------------------------------ㅡmeta-------------------------------->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){			
+			$('#control li').first().addClass('on');
+			var num=0;
+			var dir='next';
+			var btn=$('#control li');
+			var slide=$('#slide li');
+			var Ldir=$('#main .icon-left-open-big');
+			var Rdir=$('#main .icon-right-open-big');
+
+			btn.click(function(){
+				btn.removeClass('on');
+				$(this).addClass('on');
+				var i=$(this).index();
+				move(i);
+			});
+
+			function move(i){
+				if(num==i){
+					return;
+				}
+				var p=slide.eq(num);
+				var n=slide.eq(i);
+				if(dir=='next'){
+					p.css({left:0}).stop().animate({left:'-100%'});
+					n.css({left:'100%'}).stop().animate({left:0});
+				}else{
+					p.css({left:0}).stop().animate({left:'100%'});
+					n.css({left:'-100%'}).stop().animate({left:0});
+				}
+				num=i;
+			}
+
+			timer();
+			function timer(){
+				var t=setInterval(function(){
+				var q=num+1;
+				if(q==slide.length){
+					q=0;
+				}
+				btn.eq(q).trigger('click');
+				},5000);
+			}	
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if($(document).scrollTop()>120){
+					$('header #snb').addClass('sticky');
+				}else{
+					$('header #snb').removeClass('sticky');
+				}
+			});
+			$(window).scroll(function(){
+				if($(document).scrollTop()>800){
+					$('#mid_snb').addClass('sticky');
+				}else{
+					$('#mid_snb').removeClass('sticky');
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.sub').hide();
+			$('#navi>li').mouseover(function(){
+				$('.sub').hide();				
+				$(this).find('.sub').stop().slideDown();	
+				$(this).find('a').first().addClass('on');			
+			}).mouseout(function(){				
+				$('.sub').slideUp();
+				$(this).find('a').removeClass('on');
+			});			
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){			
+			$('#navi>li').mouseover(function(){							
+				$('#navi_hide>li').stop().fadeIn();
+			}).mouseout(function(){				
+				$('#navi_hide>li').stop().fadeOut();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.row dt').mouseover(function(){
+				$(this).animate({'opacity':0},'slow');
+			}).mouseout(function(){
+				$(this).animate({'opacity':1},'slow');
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.etc .row2').hide();
+			$('.etc #bar').click(function(){
+				$('.etc .row2').fadeIn();
+				$(this).hide();
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if($(document).scrollTop()>100){
+					$('#top').fadeIn();
+				}else{
+					$('#top').fadeOut();
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+			$(document).ready(function(){				
+				$('#menu dt').click(function(){
+					$('#menu dd').slideUp();
+					if($(this).hasClass('on')){
+						$(this).siblings().slideUp();
+						$('#menu dt').removeClass('on');
+					}else{
+						$(this).siblings().slideDown();
+						$('#menu dt').removeClass('on');
+						$(this).addClass('on');
+					}
+				});
+			});
+		</script><!--768px 이하-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var navi=false;
+				$('.header p').click(function(){
+					navi = !navi; /*!navi=navi의 반대=true*/
+					if(navi){
+						$('#menu').show().animate({left:0});
+						$('#m_bg').fadeIn();
+					}else{
+						$('#menu').animate({left:'-70%'},function(){
+							$(this).hide();
+							$('#m_bg').fadeOut();
+						})
+					}
+				});
+				$('#m_bg').click(function(){
+					navi = !navi;
+					if(navi){
+						$('#menu').show().animate({left:0});
+						$('#m_bg').fadeIn();
+					}else{
+						$('#menu').animate({left:'-70%'},function(){
+							$(this).hide();
+							$('#m_bg').fadeOut();
+						})
+					}							
+				});
+			});
+		</script><!--768px 이하-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.new dt').mouseover(function(){
+					$(this).animate({'opacity':0},'slow');
+				}).mouseout(function(){
+					$(this).animate({'opacity':1},'slow');
+				});
+			});
+		</script><!--768px 이하-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.new_bar p').addClass('icon-down-open');
+				$('.new .row2').hide();
+				$('.new_bar p').click(function(){					
+					if($(this).hasClass('icon-down-open')) {
+						$('.new .row2').fadeIn();
+						$(this).removeClass('icon-down-open').addClass('icon-up-open');
+						}else{
+					$('.new .row2').fadeOut();	
+					$(this).removeClass('icon-up-open').addClass('icon-down-open');		
+					}	
+				});
+				$('.best_bar p').addClass('icon-down-open');
+				$('.best .row2').hide();
+				$('.best_bar p').click(function(){					
+					if($(this).hasClass('icon-down-open')) {
+						$('.best .row2').fadeIn();
+						$(this).removeClass('icon-down-open').addClass('icon-up-open');
+						}else{
+					$('.best .row2').fadeOut();	
+					$(this).removeClass('icon-up-open').addClass('icon-down-open');		
+					}	
+				});
+			});
+		</script><!--768px 이하-->
+
+	<!---------------------------------ㅡscript-------------------------------->
+	<style type="text/css">	
+		*{margin:0; padding:0; box-sizing:border-box;}
+		body{
+			font-family: 'Raleway', 'Noto Sans', 'KoPubWorld 돋움', 'Nanum Gothic', sans-serif; font-size:1rem; color:#333;
+			overflow-x:hidden;}
+		img{vertical-align:top;}
+		a{text-decoration:none; color:#333;}
+		li{list-style:none;}	
+		header #snb #navi .sub {display:none;}
+		header #navi>li a.on {color:#f5a27a;}
+		header #snb.sticky {position:fixed; top:0; left:0; width:100%; z-index:100;
+		background-color:rgba(255,255,255,0.8);}
+		header #snb.sticky>ul {width:1201px; margin:0 auto;}
+		#mid_snb.sticky{position:fixed; top:28px; left:0; width:100%; z-index:99;
+		background-color:rgba(255,255,255,0.8);}
+		#navi_hide li {display:none;}
+		.main #control li.on{background-color:#0d3a1d;}
+		.main #dir {display:none;}
+		.etc .row2 {display:none;}
+		.etc .row dl {position:relative;}		
+		.etc .row dd:first-of-type {position:absolute;top:0;left:0; z-index:-1;}
+		#menu dl dt.on {color:#f5a27a;}
+
+	</style>
+	<!---------------------------------ㅡstyle-------------------------------->
+
+	<title>3CE</title>
+
+	<link rel="icon" type="image/x-icon" href="images/logo_icon.jpg">
+	<!---------------------------------아이콘-------------------------------->
+	<link rel="stylesheet" type="text/css" href="css/web_index.css" media="screen and (min-width:769px)">
+	<link rel="stylesheet" type="text/css" href="css/tablet_index.css" media="screen and (max-width:768px)">
+
+	<!---------------------------------CSS link-------------------------------->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Noto+Sans:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fontello/css/fontello.css">
+	<!---------------------------------폰트-------------------------------->
+</head>
+<body>
+	<div id="wrapper"><!--#wrapper-->
+		<header>
+			<h1><a href="index.html"><img src="images/logo_home.png" alt="3CE 로고"></a></h1>
+			<div id="lnb">	
+				<ul>
+					<li><a href="#"><span class="icon-globe"></span></a></li>
+					<li><a href="#"><span class="icon-login"></span></a></li>
+					<li><a href="#"><span class="icon-basket"></span></a></li>
+					<li><a href="#"><span class="icon-search"></span></a></li>
+				</ul>			
+			</div>
+			<div id="snb">
+				<ul id="navi">
+					<li><a href="edition.html"><b>E</b>dition</a>
+						<ul class="sub">
+							<li><a href="#">2019 F/W</a></li>
+							<li><a href="#">2019 S/S</a></li>							
+						</ul>
+					</li>
+					<li><a href="#"><b>F</b>ace</a>
+						<ul class="sub">
+							<li><a href="#">베이스 메이크업</a></li>
+							<li><a href="#">스킨 케어</a></li>
+							<li><a href="#">블러셔</a></li>
+							<li><a href="#">하이라이터<br />쉐이딩</a></li>							
+						</ul>
+					</li>
+					<li><a href="#"><b>E</b>ye</a>
+						<ul class="sub">
+							<li><a href="#">아이브로우</a></li>
+							<li><a href="#">아이 섀도우</a></li>
+							<li><a href="#">아이 라이너</a></li>
+							<li><a href="#">마스카라</a></li>
+							<li><a href="#">아이 프라이머</a></li>
+						</ul>
+					</li>
+					<li><a href="lip.html"><b>L</b>ip</a>
+						<ul class="sub">
+							<li><a href="#">립스틱</a></li>
+							<li><a href="#">리퀴드</a></li>
+							<li><a href="#">틴트</a></li>
+							<li><a href="#">립펜슬</a></li>
+							<li><a href="#">립케어</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><b>N</b>ail</a>
+						<ul class="sub">
+							<li><a href="#">네일 라커</a></li>
+							<li><a href="#">네일 툴</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><b>B</b>ody&nbsp;&amp;&nbsp;<b>H</b>air</a>
+						<ul class="sub">
+							<li><a href="#">바디</a></li>
+							<li><a href="#">헤어</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><b>T</b>ool</a>
+						<ul class="sub">
+							<li><a href="#">브러쉬</a></li>
+							<li><a href="#">스펀지/퍼프</a></li>
+							<li><a href="#">키트</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><b>A</b>cc</a>
+						<ul class="sub">
+							<li><a href="#">파우치</a></li>
+							<li><a href="#">거울</a></li>
+							<li><a href="#">etc.</a></li>							
+						</ul>
+					</li>
+				</ul>
+				<ul id="navi_hide">
+					<li>에디션</li>
+					<li>페이스</li>
+					<li>아이</li>
+					<li>립</li>
+					<li>네일</li>
+					<li>바디&amp;헤어</li>
+					<li>도구</li>
+					<li>악세사리</li>
+				</ul>				
+			</div>
+		</header>
+
+		<div class="header"> <!--768px 이하-->
+			<p class="icon-menu">&nbsp;</p>
+			<h1><a href="index.html"><img src="images/ta_logo.png" alt="3CE 로고"></a></h1>
+			<a href="#"><span class="icon-search">&nbsp;</span></a>
+			<a href="#"><span class="icon-ellipsis-vert">&nbsp;</span></a>
+		</div>
+
+		<div id="menu"> <!--768px 이하-->
+			<dl>
+				<dt><b>E</b>dition</dt>
+				<dd><a href="edition.html">2019 F/W</a></dd>
+				<dd><a href="#">2019 S/S</a></dd>
+			</dl>
+			<dl>
+				<dt><b>F</b>ace</dt>
+				<dd><a href="#">베이스 메이크업</a></dd>
+				<dd><a href="#">스킨 케어</a></dd>
+				<dd><a href="#">블러셔</a></dd>
+				<dd><a href="#">하이라이터, 쉐이딩</a></dd>
+			</dl>
+			<dl>
+				<dt><b>E</b>ye</dt>
+				<dd><a href="#">아이 브로우</a></dd>
+				<dd><a href="#">아이 섀도우</a></dd>
+				<dd><a href="#">아이 라이너</a></dd>
+				<dd><a href="#">마스카라</a></dd>
+				<dd><a href="#">아이 프라이머</a></dd>
+			</dl>
+			<dl>
+				<dt><b>L</b>ip</dt>
+				<dd><a href="lip.html">립스틱</a></dd>
+				<dd><a href="#">리퀴드</a></dd>
+				<dd><a href="#">틴트</a></dd>
+				<dd><a href="#">립펜슬</a></dd>
+				<dd><a href="#">립케어</a></dd>
+			</dl>
+			<dl>
+				<dt><b>N</b>ail</dt>
+				<dd><a href="#">네일 라커</a></dd>
+				<dd><a href="#">네일 툴</a></dd>
+			</dl>
+			<dl>
+				<dt><b>B</b>ody&amp;<b>H</b>air</dt>
+				<dd><a href="#">바디</a></dd>
+				<dd><a href="#">헤어</a></dd>
+			</dl>
+			<dl>
+				<dt><b>T</b>ool</dt>
+				<dd><a href="#">브러쉬</a></dd>
+				<dd><a href="#">스펀지, 퍼프</a></dd>
+				<dd><a href="#">키트</a></dd>
+			</dl>
+			<dl>
+				<dt><b>A</b>cc</dt>
+				<dd><a href="#">파우치</a></dd>
+				<dd><a href="#">거울</a></dd>
+				<dd><a href="#">etc.</a></dd>
+			</dl>
+		</div>
+
+		<div id="m_bg"> <!--768px 이하-->			
+		</div>
+
+		<div class="main">
+			<ul id="slide">
+				<li id="slide1"><a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a></li>
+				<li id="slide2"><a href="#"><img src="images/slide2.jpg" alt="슬라이드2"></a></li>
+				<li id="slide3"><a href="#"><img src="images/slide3.jpg" alt="슬라이드3"></a></li>
+				<li id="slide4"><a href="#"><img src="images/slide4.jpg" alt="슬라이드4"></a></li>
+				<li id="slide5"><a href="#"><img src="images/slide5.jpg" alt="슬라이드5"></a></li>
+			</ul>
+			<ul id="control">
+				<li><a href="#">&nbsp;</a></li>
+				<li><a href="#">&nbsp;</a></li>
+				<li><a href="#">&nbsp;</a></li>
+				<li><a href="#">&nbsp;</a></li>
+				<li><a href="#">&nbsp;</a></li>
+			</ul>
+			<ul id="dir">
+				<li id="left"><span class="icon-left-open-big"></span></li>
+				<li id="right"><span class="icon-right-open-big"></span></li>
+			</ul>
+		</div>
+
+		<div id="mid_snb">
+			<ul>
+				<li><a href="#">About 3CE</a></li>
+				<li><a href="#">Sale</a></li>
+				<li><a href="#">Today 8% Sale</a></li>
+				<li><a href="#">기획 상품</a></li>
+				<li><a href="#">Ads</a></li>
+			</ul>
+		</div>
+
+		<div class="Ad">
+			<ul>
+				<li><a href="#"><img src="images/ad1.jpg" alt="에디션"></a></li>
+				<li><a href="#"><img src="images/ad2.jpg" alt="아이"></a></li>
+				<li><a href="#"><img src="images/ad3.jpg" alt="치크"></a></li>
+				<li><a href="#"><img src="images/ad4.jpg" alt="립"></a></li>
+			</ul>
+		</div>
+		<div id="section">
+			<div class="new"> <!--768px 이하-->
+				<h2>New</h2>
+				<div class="row row1">
+					<dl>
+						<dt><a href="#"><img src="images/new01.jpg" alt="new01"></a></dt>			
+						<dd><a href="#"><img src="images/new_01.png" alt="new_01"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT KIT</a></dd>
+						<dd>144,000원</dd>
+						<dd>열 두가지 모든 컬러를 내 손에<br />
+						올가을은 매일 클라우드 립 틴트 하세요!</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new02.jpg" alt="new02"></a></dt>			
+						<dd><a href="#"><img src="images/new_02.png" alt="new_02"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #BEIGE AVENUE</a></dd>
+						<dd>15,000원</dd>
+						<dd>구름처럼 포근하게 입술을 감싸는 <br />
+						매력적인 누드 베이지</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new03.jpg" alt="new03"></a></dt>			
+						<dd><a href="#"><img src="images/new_03.png" alt="new_03"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #ACTIVE LADY</a></dd>
+						<dd>15,000원</dd>
+						<dd>베이지와 로즈톤의 성공적 콜라보 ♡<br />
+						민낯에도 생기있는 어텀 로즈 베이지</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new04.jpg" alt="new04"></a></dt>			
+						<dd><a href="#"><img src="images/new_04.png" alt="new_04"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #PEACH TEASE</a></dd>
+						<dd>15,000원</dd>
+						<dd>차분한 오렌지 톤과 코랄의 만남 ♡<br />
+						자주 손이 가는 MLBB 생기 립</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new05.jpg" alt="new05"></a></dt>			
+						<dd><a href="#"><img src="images/new_05.png" alt="new_05"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #NEEDFUL</a></dd>
+						<dd>15,000원</dd>
+						<dd>매일이 #니드풀한 빈티지 컬러<br />
+						모던한 감성의 로즈 브릭 브라운</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new06.jpg" alt="new06"></a></dt>			
+						<dd><a href="#"><img src="images/new_06.png" alt="new_06"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #MACARON RED</a></dd>
+						<dd>15,000원</dd>
+						<dd>상큼 달콤한 마카롱 한 입을 베어문 듯<br />
+						실패없는 리얼 레드 :)</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+				</div>
+				<div class="row row2">
+					<dl>
+						<dt><a href="#"><img src="images/new07.jpg" alt="new07"></a></dt>			
+						<dd><a href="#"><img src="images/new_07.png" alt="new_07"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #IMMANENCE</a></dd>
+						<dd>15,000원</dd>
+						<dd>#어디서나 #시선집중<br />
+						고혹적인 분위기의 NEW 브릭 레드!</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/new08.jpg" alt="new08"></a></dt>			
+						<dd><a href="#"><img src="images/new_08.png" alt="new_08"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #FAIRY CAKE</a></dd>
+						<dd>15,000원</dd>
+						<dd>레트로 무드에 더해진<br />
+						사랑스러운 MLBB 로지 핑크!</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/new09.jpg" alt="new09"></a></dt>			
+						<dd><a href="#"><img src="images/new_09.png" alt="new_09"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #PINKALICIOUS</a></dd>
+						<dd>15,000원</dd>
+						<dd>#MLBB계의_혁명<br />
+						생기발랄 걸리시 로즈 핑크</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>				
+				</div>
+				<div class="new_bar">
+					<p></p>
+				</div>
+			</div>
+			<div class="best"> <!--768px 이하-->
+				<h2>Best</h2>
+				<div class="row row1">
+					<dl>
+						<dt><a href="#"><img src="images/best01.jpg" alt="best01"></a></dt>			
+						<dd><a href="#"><img src="images/best_01.png" alt="best_01"></a></dd>
+						<dd><a href="#">3CE CLOUD LIP TINT #BEIGE AVENUE</a></dd>
+						<dd>15,000원</dd>
+						<dd>구름처럼 포근하게 입술을 감싸는<br />
+						매력적인 누드 베이지 ♡</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best02.jpg" alt="best02"></a></dt>			
+						<dd><a href="#"><img src="images/best_02.png" alt="best_02"></a></dd>
+						<dd><a href="#">3CE SOFT LIP LACQUER #IMPOSING</a></dd>
+						<dd>15,000원</dd>
+						<dd>빛바랜 로즈 부케에 톡 떨어진 빨간 장미 꽃잎같은<br />
+						레디쉬 로즈 컬러로 언제 어디서나 시선 집중</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best03.jpg" alt="best03"></a></dt>			
+						<dd><a href="#"><img src="images/best_03.png" alt="best_03"></a></dd>
+						<dd><a href="#">3CE SOFT LIP LACQUER #DEFINE THIS</a></dd>
+						<dd>15,000원</dd>
+						<dd>온-고잉 코랄의 새로운 정의<br />
+						부드럽지만 강력하게 발색되는 365 데일리 착붙립</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best04.jpg" alt="best04"></a></dt>			
+						<dd><a href="#"><img src="images/best_04.png" alt="best_04"></a></dd>
+						<dd><a href="#">3CE SOFT LIP LACQUER #ORDINARY RED</a></dd>
+						<dd>15,000원</dd>
+						<dd>얼굴의 생기를 하드캐리하는<br />
+						빨갛게 잘 익은 선명한 토마토빛 레드 컬러</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best05.jpg" alt="best05"></a></dt>			
+						<dd><a href="#"><img src="images/best_05.png" alt="best_05"></a></dd>
+						<dd><a href="#">3CE MULTI POT PALETTE #GOING STEADY</a></dd>
+						<dd>35,000원</dd>
+						<dd>입술에, 눈가에, 치크에 3 IN 1 원하는 색으로 가볍고 강력하게 표현 가능한 멀티 팟 팔레트</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best06.jpg" alt="best06"></a></dt>			
+						<dd><a href="#"><img src="images/best_06.png" alt="best_06"></a></dd>
+						<dd><a href="#">3CE SUPER SLIM EYE BROW PENCIL</a></dd>
+						<dd>12,000원</dd>
+						<dd>아침에 그린 눈썹이 저녁까지 그대로<br />
+						눈썹 결 하나하나 섬세하게 표현이 가능한 아이브로우</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+				</div>
+				<div class="row row2">
+					<dl>
+						<dt><a href="#"><img src="images/best07.jpg" alt="best07"></a></dt>			
+						<dd><a href="#"><img src="images/best_07.png" alt="best_07"></a></dd>
+						<dd><a href="#">3CE LIQUID BRUSH EYE LINER #BROWN</a></dd>
+						<dd>17,000원</dd>
+						<dd>수분은 물론 유분까지 완벽 차단,<br />
+						부드럽고 깊이감 있는 눈매를 연출해 줄 브라운 컬러</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best08.jpg" alt="best08"></a></dt>			
+						<dd><a href="#"><img src="images/best_08.png" alt="best_08"></a></dd>
+						<dd><a href="#">3CE LIQUID BRUSH EYE LINER #BLACK</a></dd>
+						<dd>17,000원</dd>
+						<dd>처음 그렸던 그 라인 그대로 하루 종일 픽싱 완료<br />
+						또렷하고 선명한 눈매를 완성해줄 블랙 컬러</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/best09.jpg" alt="best09"></a></dt>			
+						<dd><a href="#"><img src="images/best_09.png" alt="best_09"></a></dd>
+						<dd><a href="#">3CE FACE TUNING CONCEALER PALETTE</a></dd>
+						<dd>28,000원</dd>
+						<dd>피부 고민에 꼭 필요한 여섯가지 컬러로<br />
+						메이크업 화보 속 무결점 피부를 완성해줄 필수 아이템</dd>
+						<dd><a href="#" class="icon-menu">&nbsp;</a><a href="#" class="icon-heart">&nbsp;</a><a href="#" class="icon-cart-plus">&nbsp;</a></dd>
+					</dl>
+				</div>
+				<div class="best_bar">
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="etc">
+			<h2>And so on...</h2>
+			<div class="row">	
+				<div class="row1">			
+					<dl>
+						<dt><a href="#"><img src="images/etc1.jpg" alt="etc1"></a></dt>			
+						<dd><a href="#"><img src="images/etc_1.png" alt="etc_1"></a></dd>
+						<dd><a href="#">3CE TREATMENT HAIR TINT</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/etc2.jpg" alt="etc2"></a></dt>
+						<dd><a href="#"><img src="images/etc_2.png" alt="etc_2"></a></dd>
+						<dd><a href="#">3CE MINI MAKEUP BRUSH KIT</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/etc3.jpg" alt="etc3"></a></dt>
+						<dd><a href="#"><img src="images/etc_3.png" alt="etc_3"></a></dd>
+						<dd><a href="#">3CE MOOD RECIPE LONG<br />
+						LASTING NAIL LACQUER #PK23</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/etc4.jpg" alt="etc4"></a></dt>
+						<dd><a href="#"><img src="images/etc_4.png" alt="etc_4"></a></dd>
+						<dd><a href="#">3CE LIP&EYE REMOVER</a></dd>
+					</dl>		
+					<dl>
+						<dt><a href="#"><img src="images/etc5.jpg" alt="etc5"></a></dt>
+						<dd><a href="#"><img src="images/etc_5.png" alt="etc_5"></a></dd>
+						<dd><a href="#">3CE PINK BOUTIQUE BUBBLE<br />
+						FOAM CLEANSER</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/etc6.jpg" alt="etc6"></a></dt>
+						<dd><a href="#"><img src="images/etc_6.png" alt="etc_6"></a></dd>
+						<dd><a href="#">3CE WHITE MILK SLEEPING MASK</a></dd>
+					</dl>				
+				</div>
+				<div class="row2">
+					<dl>
+						<dt><a href="#"><img src="images/etc7.jpg" alt="etc7"></a></dt>
+						<dd><a href="#"><img src="images/etc_7.png" alt="etc_7"></a></dd>
+						<dd><a href="#">3CE MESH FOUNDATION</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/etc8.jpg" alt="etc8"></a></dt>
+						<dd><a href="#"><img src="images/etc_8.png" alt="etc_8"></a></dd>
+						<dd><a href="#">3CE MAISON KITSUNE PRIMER SETTING POWDER</a></dd>
+					</dl>		
+					<dl>
+						<dt><a href="#"><img src="images/etc9.jpg" alt="etc9"></a></dt>
+						<dd><a href="#"><img src="images/etc_9.png" alt="etc_9"></a></dd>
+						<dd><a href="#">3CE CLEAR POUCH_SMALL #BLACK</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#"><img src="images/etc10.jpg" alt="etc10"></a></dt>
+						<dd><a href="#"><img src="images/etc_10.png" alt="etc_10"></a></dd>
+						<dd><a href="#">3CE TRIPLE SHADOW #GO OVER</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/etc11.jpg" alt="etc11"></a></dt>
+						<dd><a href="#"><img src="images/etc_11.png" alt="etc_11"></a></dd>
+						<dd><a href="#">3CE TRIPLE SHADOW #OVERSTAY</a></dd>
+					</dl>	
+					<dl>
+						<dt><a href="#"><img src="images/etc12.jpg" alt="etc12"></a></dt>
+						<dd><a href="#"><img src="images/etc_12.png" alt="etc_12"></a></dd>
+						<dd><a href="#">3CE TRIPLE SHADOW #BURNT PEACH</a></dd>
+					</dl>	
+				</div>
+			</div>
+			<div id="bar">
+				<p class="icon-down-open"></p>
+			</div>				
+		</div>
+		<div id="top">
+			<a href="#"><span class="icon-up"></span></a>
+		</div>
+		<footer>
+			<ul id="bot_snb">
+				<li><a href="#">CUSTOMER</a>
+					<ul class="bot_sub">
+						<li>
+							0502 707 8888<br />
+							평일 09:30 - 18:00<br />
+							점심 12:00 - 13:00<br />
+							휴무 (토, 일, 공휴일)
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">DELIVERY</a>
+					<ul class="bot_sub">
+						<li>
+							배송조회>><br />
+							반품주소<br />
+							인천광역시 계약구 계산동<br />
+							계양우체국 사서함 1117호<br />
+							<small>반드시 우체국 택배 이용</small>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">ACCOUNT</a>
+					<ul class="bot_sub">
+						<li>
+							신한 140-007-646350<br />
+							국민 392001-04-066016<br />
+							농협 130011-55-003804<br />
+							기업 123-132282-01-011<br />
+							㈜난다						
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">STORE</a>
+					<ul class="bot_sub">
+						<li>
+							<a href="#">플래그십</a><br />
+							<a href="#">백화점</a><br />
+							<a href="#">면세점</a><br />
+							<a href="#">올리브영</a><br />
+							<a href="#">해외</a><br />
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">CONECT</a>
+					<ul class="bot_sub">
+						<li>
+							<a href="#">제휴신청</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">NOTICE</a>
+					<ul class="bot_sub">
+						<li>
+							<a href="#">회사소개</a><br />
+							<a href="#">이용안내</a><br />
+							<a href="#">해외배송</a><br />
+							<a href="#">공지사항</a><br />
+							<a href="#">이벤트</a><br />
+							<a href="#">Q &amp; A</a><br />
+						</li>		
+					</ul>
+				</li>					
+			</ul>
+			<ul class="sns">
+				<li><a href="#"><span class="icon-facebook-rect"></span></a></li>
+				<li><a href="#"><span class="icon-instagram-filled"></span></a></li>
+				<li><a href="#"><span class="icon-comment"></span></a></li>
+				<li><a href="#"><span class="icon-blogger-rect"></span></a></li>
+				<li><a href="#"><span class="icon-youtube-play"></span></a></li>
+			</ul>
+			<address>
+				대표이사. 신지은 │ 사업자등록번호. 130-86-24632 │ 통신판매업신고. 2014-서울마포-0835 │ 개인정보보호책임자. 한관현 [사업자정보확인]<br />
+				회사명. ㈜난다 │ 전화. 0502-707-8888 │ 팩스. 02-335-5274 │ 이메일. nanda@stylenanda.com │ 주소. 서울특별시 마포구 잔다리로 32 서문빌딩 2,3,4,6F<br />
+				ⓒ 2019 NANDA All rights reserved. │ 개인정보처리방침 │ 영상정보처리기기운영･관리방침 │ 이용약관<br />
+				고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. 　LG U+ 에스크로 (서비스가입사실확인)
+			</address>
+			<p>
+				개인정보처리방침 │ 영상정보처리기기운영･관리방침 │ 이용약관
+			</p>
+			<p>
+				ⓒ 2019 NANDA All rights reserved. 
+			</p>
+			</footer>			
+	</div><!--#wrapper-->	
+</body>
+</html>

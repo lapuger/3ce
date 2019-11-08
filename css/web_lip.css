@@ -1,0 +1,293 @@
+@charset="UTF-8"
+
+#wrapper {
+	width:100%;
+}
+.header,#menu {display:none;}
+header {
+	width:100%; margin:0 auto;
+	text-align:center; 
+	margin-bottom:5px;
+}
+header h1 { 
+	width:100%; margin:35px auto;
+}
+header #lnb {	
+	position: absolute;top:25px; right:12px;
+}
+header #lnb li {
+	margin-bottom:10px;
+	font-size:22px;	
+}
+header #lnb li:last-child {
+	margin-bottom:0;
+}
+header #lnb a {
+	color:#444;
+}
+header #snb {
+	width:1201px; margin:0 auto; border:0.1px solid transparent;
+	position:relative;
+}
+header #snb #navi {
+	height:40px;	
+	position:relative; top:0; left:0;
+}
+header #snb #navi>li {
+	float:left;	width:150px; 
+	font-size:20px; font-weight:600; line-height:2;
+	position:relative;
+}
+header #snb .sub>li:hover {
+	background-color:#f9eae3;
+}
+header #snb #navi li b{
+	font-weight:600;
+	color:#f5a27a;
+}
+header #snb #navi .sub {
+	width:100%;
+	font-size:14px; font-family: 'KopubWorld 돋움';
+	margin-top:15px;
+	background-color:rgba(255,255,255,0.9);
+	position:absolute; z-index:100;
+}
+header #navi .sub li a {
+	color:#505050;
+}
+header #snb #navi .sub li {
+	padding:5px 0;	
+}
+header #snb #navi_hide {
+	width:1201px; margin:0 auto;
+	overflow:hidden;
+	height:15px;
+	
+}
+header #snb #navi_hide li {
+	float:left;	width:150px; 
+	font-size:13px; line-height:1; color:#505050;	
+}
+.menu {
+	width:800px; margin:40px auto 80px auto;
+	padding-left:30px;	
+	margin-bottom:80px;
+	border-top:2px solid #933e15;
+}
+.menu #sub_snb {
+	height:40px;	
+	position:relative; top:0; left:0;
+}
+.menu #sub_snb>li {
+	float:left;	width:150px; 
+	font-size:18px; font-weight:600; line-height:2;	
+	text-align:center;
+}
+.menu #sub_snb li b{
+	font-weight:600;
+	color:#933e15;
+}
+.menu #sub_hide {
+	width:1201px; margin:0 auto;
+	overflow:hidden;
+	height:15px;
+}
+#sub_hide li {
+	float:left;	width:150px; 
+	font-size:13px; line-height:1; color:#505050;
+	text-align:center;	
+}
+section {
+	width:100%; max-width:1200px; margin:0 auto;
+		padding-bottom:80px;
+		position:relative;
+		overflow:hidden;
+}
+section h3 {
+	font-size:18px;
+	color:#505050;
+	width:1200px; margin:0 auto;
+	padding-left:25px;
+	margin-bottom:25px;	
+}
+section h3 a {
+	color:#505050;
+}
+section form {
+	position:absolute; right:25px; top:10px;
+}
+section form li {
+	display:inline-block;
+	margin-left:10px;
+	font-family:'KopubWorld 돋움';
+}
+section form input[type=checkbox] {	
+	width:15px; height:15px;	
+}
+.page_in {
+	width:100%;
+	overflow:hidden;
+}
+.page_in dl {	
+	float:left; width:100%;
+	max-width:350px;
+	margin-left:3%;	
+	margin-bottom:100px;
+	position:relative;		
+}
+@media screen and (max-width: 1172px) {
+	.page_in {
+		width:100%; max-width:740px; margin:0 auto;
+	}
+	.page_in dl {
+		margin-left:0;
+	}
+	.page_in dl:nth-of-type(2n) {
+		margin-left:5%;
+	}
+}
+.page_in dt {
+	margin-bottom:10px;	
+}
+.page_in dt img {
+	width:100%;	
+}
+.page_in dd:nth-of-type(2) {
+	font-size:16px;
+	font-weight:600;
+	line-height:1.2;
+	height:43px;
+}
+.page_in dd:nth-of-type(3) {
+	font-size:15px;
+	font-weight:400;
+	line-height:1.8;
+	color:#666;
+	font-family:'KopubWorld 돋움';
+}
+.page_in dd:nth-of-type(4) {
+	font-size:13px;
+	font-weight:400;
+	line-height:1.6;
+	color:#999;
+	font-family:'KopubWorld 돋움';
+}
+.page_in .icon-heart {
+	position:absolute; top:10px; right:10px;
+	color:#999;	
+	font-size:22px;
+	transition: color 1s;
+}
+.page_in .icon-heart:hover {
+	color:#c10224;
+}
+.page_in .icon-cart-plus {
+	color:#999;
+	font-size:26px;
+	position:absolute; bottom:-20px; right:0;	
+	transition: color 1s;
+}
+.page_in .icon-cart-plus:hover {
+	color:#0d3a1d;
+}		
+.page_in .icon-menu {display:none;}
+.page_in dd img {
+	width:100%;	
+	padding-top:50px;	
+}
+#num_bar {
+	width:100%; max-width:180px; margin:0 auto;
+	height:100px;
+	text-align:center;
+	border:0.1px solid transparent;
+	position:relative;
+}
+#num_bar li {
+	display:inline-block;
+	width:30px; height:30px;
+	font:normal 13px '나눔고딕';
+	color:#666;
+	border:1px solid #999;
+	cursor:pointer;
+	line-height:2;
+}
+#num_bar p {
+	display:inline-block;
+	text-align:center;
+	font:normal 13px '나눔고딕';
+	width:30px; height:30px;
+	border:1px solid #999;
+	position:absolute; top:0;
+	line-height:2.2;
+}
+#num_bar #left {
+	left:0;
+}
+#num_bar #right {
+	right:0;
+}
+#top {
+	width:40px; height:40px;
+	background-color:#0d3a1d;
+	 font-size:30px; line-height:1.4; text-align:center;
+	position:fixed; bottom:100px; right:20px; z-index:100;
+}
+#top a {
+	color:#fff;
+}
+footer {
+	width:100%;
+	margin-top:100px;
+	text-align:center;
+}
+#bot_snb {
+	overflow:hidden;	
+	width:900px; margin:0 auto;
+	height:120px;
+}
+#bot_snb>li {
+	float:left;
+	text-align:left;
+	margin-right:60px;
+	font-size:14px;
+	font-weight:700;
+}
+#bot_snb>li:first-child {
+	margin-left:20px;
+}
+#bot_snb>li:last-child {
+	margin-right:0;
+}
+.bot_sub li {	
+	width:100%;
+	font-size:12px;
+	font-weight:400;
+	text-align:left;
+	margin-top: 10px;
+	line-height:1.5;
+	color:#666;
+}
+.bot_sub li small {
+	font-size:11px;
+	color:#999;
+}
+.bot_sub li a {
+	color:#666;
+}
+.bot_sub li a:hover {
+	text-decoration:underline;
+}
+.sns {
+	margin:30px auto;
+}
+.sns li {
+	display:inline-block;
+	margin-right:10px;
+	font-size:24px;
+}
+address {
+	font-size:11px;
+	font-style:normal;
+	line-height:1.8;
+	margin-bottom:30px;
+}
